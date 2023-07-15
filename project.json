@@ -1,0 +1,24 @@
+{
+  "name": "any-status",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "local-registry": {
+      "executor": "@nx/js:verdaccio",
+      "options": {
+        "port": 4873,
+        "config": ".verdaccio/config.yml",
+        "storage": "tmp/local-registry/storage"
+      }
+    },
+    "configure": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "./node_modules/.bin/husky install",
+          "git config alias.cz '!./node_modules/.bin/git-cz'"
+        ],
+        "parallel": false
+      }
+    }
+  }
+}
