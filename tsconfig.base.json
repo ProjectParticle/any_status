@@ -15,7 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "domain": ["packages/domain/src/index.ts"]
+      "@_/config": ["packages/config/src/index.ts"],
+      "@_/core": ["packages/core/src/index.ts"],
+      "@_/domain": ["packages/domain/src/index.ts"],
+      "@_/storage-fs": ["packages/storage-fs/src/index.ts"],
+      "@_/storage-pg": ["packages/storage-pg/src/index.ts"],
+      "@_/storage-redis": ["packages/storage-redis/src/index.ts"],
+      "@_/storage-sqlite": ["packages/storage-sqlite/src/index.ts"],
+      "@_/types": ["packages/types/src/index.ts"],
+      "@_/types/storage": ["packages/types/src/storage/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

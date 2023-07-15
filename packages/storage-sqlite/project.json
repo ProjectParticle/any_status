@@ -1,21 +1,21 @@
 {
-  "name": "domain",
+  "name": "storage-sqlite",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/domain/src",
+  "sourceRoot": "packages/storage-sqlite/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/domain/**/*.ts"]
+        "lintFilePatterns": ["packages/storage-sqlite/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/domain/jest.config.ts",
+        "jestConfig": "packages/storage-sqlite/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

@@ -1,21 +1,21 @@
 {
-  "name": "domain",
+  "name": "storage-redis",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/domain/src",
+  "sourceRoot": "packages/storage-redis/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/domain/**/*.ts"]
+        "lintFilePatterns": ["packages/storage-redis/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/domain/jest.config.ts",
+        "jestConfig": "packages/storage-redis/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
